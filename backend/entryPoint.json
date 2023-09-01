@@ -1,0 +1,11 @@
+{
+    "url": "https://online-go.com",
+    "params": {
+        "transports": ["websocket"]
+    },
+    "katago": {
+        "exe": "D:/KataGoEngine/katago.exe",
+        "config": "D:/KataGoEngine/default_gtp.cfg",
+        "model": "D:/KataGoEngine/default_model.bin.gz"
+    }
+}
