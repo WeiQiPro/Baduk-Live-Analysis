@@ -3,10 +3,15 @@ import Queue from './queue.js';
 
 export default class KataGo {
     constructor({
-        ai: ai,
-        model: model,
-        config: config
+        ai,
+        model,
+        config
     }) {
+
+        console.log('ai:', ai)
+        console.log('model:', model)
+        console.log('config:', config)
+
         this.engine = spawn(ai, [
             'analysis',
             '-config',
@@ -60,8 +65,8 @@ export default class KataGo {
         return query
     }
 
-    async query({game, maxVisits = null, maxRetries = 3}) {
-        const game = game;
+    async query({masterGame, maxVisits = null, maxRetries = 3}) {
+        const game = masterGame;
         const listOfMoves = game.moves.list
         const gameQueryID = game.id + game.query.amount
         const query = queryHash({moves: listOfMoves, maxVisits: maxVisits})

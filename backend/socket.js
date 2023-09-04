@@ -20,7 +20,7 @@ export const createAIAnalysisServer = () => {
 };
 
 
-export const ogsSocket = (url, params) => {
+export const createOGSSocket = (url, params) => {
     const socket = io(url, params);
 
     socket.on('connect', () => {

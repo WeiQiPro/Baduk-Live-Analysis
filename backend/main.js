@@ -6,17 +6,15 @@ import AI from './ai.js';
 import { createOGSSocket, createAIAnalysisServer } from './socket.js';
 import { dueProcessOfReviews } from './analysis.js';
 
-const createAIObject = (filePaths) => new AI(filePaths);
-
 async function readEntryPointFile() {
   const moduleDir = dirname(fileURLToPath(import.meta.url));
-  const filePath = join(moduleDir, 'entryPoint.json');
+  const filePath = join(moduleDir, '_.json');
 
   try {
-    const entryPointData = await fs.readFile(filePath, 'utf-8');
-    return JSON.parse(entryPointData);
+    const _Data = await fs.readFile(filePath, 'utf-8');
+    return JSON.parse(_Data);
   } catch (err) {
-    throw new Error(`Failed to read and parse entryPoint.json: ${err.message}`);
+    throw new Error(`Failed to read and parse _.json: ${err.message}`);
   }
 }
 
@@ -45,10 +43,10 @@ function initializeServerEvents(analysisServer, games, kataGo) {
 async function main() {
   let games = {};
   try {
-    const entryPoint = await readEntryPointFile();
-    console.log('Parsed entryPoint.json:', entryPoint);
-    const kataGo = createAIObject(entryPoint.katago);
-    const ogsSocket = createOGSSocket(entryPoint.url, entryPoint.params);
+    const _ = await readEntryPointFile();
+    console.log('Parsed _.json:', _);
+    const kataGo = new AI(_.katago);
+    const ogsSocket = createOGSSocket(_.url, _.params);
     const analysisServer = createAIAnalysisServer();
 
     initializeServerEvents(analysisServer, games, kataGo);
@@ -57,7 +55,7 @@ async function main() {
       console.log('\nGracefully shutting down from SIGINT (Ctrl+C)');
       kataGo.close();
       ogsSocket.close();
-      analysisServer.close();
+      analysisServer.server.close();
       process.exit();
     });
   } catch (error) {
@@ -67,3 +65,4 @@ async function main() {
 }
 
 export default main;
+main();
