@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(26, 26, 26);
+    color: rgb(233, 229, 229);
+    font-family: 'Public Sans', sans-serif;
+}
+
+.gobanCanvas {
+    border: 1px solid rgb(211, 209, 209);
+    /* You can adjust other styling properties here */
+}
+
+
+#urlInput {
+    background-color: black;
+    /* Sets the background color of the input field to black */
+    border: 2px solid white;
+    /* Sets a white border around the input field */
+    color: white;
+    /* Sets the text color inside the input field to white */
+}
+
+button#sendButton,
+#addButton {
+    background-color: black;
+    /* Sets the background color of the button to black */
+    color: white;
+    /* Sets the text color of the button to white */
+    border: 2px solid white;
+    /* Sets a white border around the button */
+}
+
+button.deleteLink {
+    margin-left: 10px;
+}
+
+#GamesList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 350px));
+    /* You can adjust the column width */
+    grid-gap: 50px;
+    /* Gap between grid items */
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.evaluationContainer {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    /* Adjust as needed */
+    border: 1px solid white;
+    position: relative;
+    overflow: hidden;
+}
+
+.whiteWinRate {
+    text-align: center;
+    background-color: white;
+    /* Color for black's win rate */
+}
+
+.blackWinRate {
+    text-align: center;
+    background-color: black;
+    position: relative; /* Positions the text relative to its normal position */
+    top: 5px; /* Moves the text down by 5 pixels */
+    /* Color for black's win rate */
+}
+
+.winRateBar {
+    height: 100%;
+    /* Default color before data is set */
+}
