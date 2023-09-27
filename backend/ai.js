@@ -7,11 +7,6 @@ export default class KataGo {
         model,
         config
     }) {
-
-        console.log('ai:', ai)
-        console.log('model:', model)
-        console.log('config:', config)
-
         this.engine = spawn(ai, [
             'analysis',
             '-config',

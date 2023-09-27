@@ -1,4 +1,4 @@
-export const dueProcessOfReviews = ({server, socket, reviews, games, ai}) => {
+export const dueProcessOfReviews = (server, socket, reviews, games, ai) => {
     const links = reviews
     links.forEach((review, index) => {
         const parts = review.split("/");
@@ -24,7 +24,7 @@ export const dueProcessOfReviews = ({server, socket, reviews, games, ai}) => {
     });
 }
 
-export const createGame = ({ state, id, index, games }) => {
+export const createGame = ( state, id, index, games ) => {
     if (games[id]) {
         return;
     }
@@ -56,7 +56,7 @@ export const createGame = ({ state, id, index, games }) => {
     };
 };
 
-export const engineAnalysis = async ({ server, game, move, ai }) => {
+export const engineAnalysis = async ( server, game, move, ai ) => {
     let modifiedGame = {
         ...game,
         moves: {
@@ -83,8 +83,8 @@ export const engineAnalysis = async ({ server, game, move, ai }) => {
     }
 };
 
-async function updateGameAndEmit({ server, game }) {
-    await writeGamesToFile(game);
+async function updateGameAndEmit( server, game ) {
+    //await writeGamesToFile(game);
 
     const gameEmitID = `game/${game.query.id}`
 
@@ -161,7 +161,7 @@ export const convertMovesToProperCoordinates = (moveString) => {
     return moves;
 };
 
-export const createGameAnalysisStatistics = ({ game, evaluation }) => {
+export const createGameAnalysisStatistics = ( game, evaluation ) => {
     const modifiedGame = {
         ...game
     }
@@ -213,7 +213,7 @@ function logGameStatistics(game) {
     );
 }
 
-function convertOwnershipMapToTerritory({ game, ownershipMap }) {
+function convertOwnershipMapToTerritory( game, ownershipMap ) {
     const threshold = 0.4;
     let blackEstimatedPoints = 0;
     let whiteEstimatedPoints = 0;

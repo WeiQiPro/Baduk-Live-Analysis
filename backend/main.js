@@ -18,7 +18,7 @@ async function readEntryPointFile() {
   }
 }
 
-function initializeServerEvents(analysisServer, games, kataGo) {
+function initializeServerEvents(analysisServer, ogsSocket, games, kataGo) {
   analysisServer.server.on('connection', (client) => {
     console.log('A client connected. Welcome to the server.');
     analysisServer.client = client;
@@ -35,6 +35,7 @@ function initializeServerEvents(analysisServer, games, kataGo) {
       console.log(links);
       const parseData = JSON.parse(links);
       const reviews = parseData.data;
+      console.log(reviews)
       dueProcessOfReviews(analysisServer, ogsSocket, reviews, games, kataGo);
     });
   });
@@ -49,7 +50,7 @@ async function main() {
     const ogsSocket = createOGSSocket(_.url, _.params);
     const analysisServer = createAIAnalysisServer();
 
-    initializeServerEvents(analysisServer, games, kataGo);
+    initializeServerEvents(analysisServer, ogsSocket, games, kataGo);
 
     process.on('SIGINT', () => {
       console.log('\nGracefully shutting down from SIGINT (Ctrl+C)');
