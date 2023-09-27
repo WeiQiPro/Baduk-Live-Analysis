@@ -7,7 +7,14 @@ export const createAIAnalysisServer = () => {
   const server = {
     http: nodeServer,
     client: {},
-    server: new Server(nodeServer),
+    server: new Server(nodeServer, {
+        cors: {
+          origin: "http://127.0.0.1:5500",
+          methods: ["GET", "POST"],
+          allowedHeaders: ["my-custom-header"],
+          credentials: true
+        }
+    }),
     port: 2468,
   };
 
