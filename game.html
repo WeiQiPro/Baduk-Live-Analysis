@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body>
+    <h1>Game Page</h1>
+    <p>Status: <span id="status">Not Connected</span></p>
+
+    <script>
+        const socket = io('http://localhost:2468'); // Assuming your BES server is running on port 3000
+
+        socket.on('connect', () => {
+            document.getElementById('status').textContent = 'Connected';
+        });
+
+        socket.on('disconnect', () => {
+            document.getElementById('status').textContent = 'Disconnected';
+        });
+
+        // Assuming the server will emit messages in the format ":type/:id"
+        socket.on('/:type/:id', (data) => {
+            console.log(`Received data for ${data.type}/${data.id}:`, data);
+            
+            // You can update the UI or do other tasks based on the received data here
+        });
+    </script>
+</body>
+</html>

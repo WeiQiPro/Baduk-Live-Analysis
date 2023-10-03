@@ -1,3 +1,4 @@
-archived/*
-node_modules/
-gtp_logs/
+/flood_fill_logs.json
+/gtp_logs
+/katago
+/node_modules
