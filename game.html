@@ -21,9 +21,13 @@
             document.getElementById('status').textContent = 'Disconnected';
         });
 
-        // Assuming the server will emit messages in the format ":type/:id"
-        socket.on('/:type/:id', (data) => {
-            console.log(`Received data for ${data.type}/${data.id}:`, data);
+        const pathSegments = window.location.pathname.split('/');
+        const type = pathSegments[1];
+        const id = pathSegments[2];
+        const eventName = `${type}/${id}`;
+        console.log(eventName)
+        socket.on(eventName, (data) => {
+            console.log(`Received data for ${eventName}:`, data);
             
             // You can update the UI or do other tasks based on the received data here
         });

@@ -192,20 +192,14 @@ function formatGameMoveData(submission, moves, moveNumber = 0) {
             const formatedMoves = [];
             moves.forEach((move, index) => {
                 const color = index % 2 === 0 ? 'b' : 'w';
-                const letter = toLetterCoordinate(move[0]);
-                const number = toNumberCoordinate(move[1]);
-                formatedMoves.push([color, letter, number]);
+                formatedMoves.push([color, move[0], move[1]]);
             });
             return formatedMoves;
         }
 
         case 'move': {
-            const formatedMoves = []
             const color = moveNumber % 2 == 0 ? 'b' : 'w'
-            const letter = toLetterCoordinate(moves[0])
-            const number = toNumberCoordinate(moves[1])
-
-            formatedMoves.push([color, letter, number])
+            const formatedMoves = [color, moves[0], moves[1]]
             return formatedMoves
         }
     }
@@ -616,7 +610,7 @@ function updateGameAndEmit(game) {
         type: gameEmitID,
         data: game,
     };
-
+    
     GAMES[game.id] = game
 
     BES.emit(gameEmitID, JSON.stringify(payload));
