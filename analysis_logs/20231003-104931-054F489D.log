@@ -1,0 +1,33 @@
+2023-10-03 10:49:31-0400: Running with following config:
+logDir = analysis_logs
+maxVisits = 500
+nnCacheSizePowerOfTwo = 23
+nnMaxBatchSize = 64
+nnMutexPoolSizePowerOfTwo = 17
+nnRandomize = true
+numAnalysisThreads = 2
+numSearchThreads = 16
+reportAnalysisWinratesAs = BLACK
+
+2023-10-03 10:49:31-0400: Analysis Engine starting...
+2023-10-03 10:49:31-0400: KataGo v1.13.0
+2023-10-03 10:49:31-0400: nnRandSeed0 = 15006936610210631663
+2023-10-03 10:49:31-0400: After dedups: nnModelFile0 = ./katago/default_model.bin.gz useFP16 auto useNHWC auto
+2023-10-03 10:49:31-0400: Initializing neural net buffer to be size 29 * 29 allowing smaller boards
+2023-10-03 10:49:32-0400: Found OpenCL Platform 0: Intel(R) OpenCL (Intel(R) Corporation) (OpenCL 2.1 )
+2023-10-03 10:49:32-0400: Found 2 device(s) on platform 0 with type CPU or GPU or Accelerator
+2023-10-03 10:49:32-0400: Found OpenCL Platform 1: NVIDIA CUDA (NVIDIA Corporation) (OpenCL 3.0 CUDA 12.2.146)
+2023-10-03 10:49:32-0400: Found 1 device(s) on platform 1 with type CPU or GPU or Accelerator
+2023-10-03 10:49:32-0400: Found OpenCL Device 0: Intel(R) UHD Graphics 630 (Intel(R) Corporation) (score 6000201)
+2023-10-03 10:49:32-0400: Found OpenCL Device 1: Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz (Intel(R) Corporation) (score 201)
+2023-10-03 10:49:32-0400: Found OpenCL Device 2: NVIDIA GeForce GTX 1060 with Max-Q Design (NVIDIA Corporation) (score 11000300)
+2023-10-03 10:49:32-0400: Creating context for OpenCL Platform: NVIDIA CUDA (NVIDIA Corporation) (OpenCL 3.0 CUDA 12.2.146)
+2023-10-03 10:49:32-0400: Using OpenCL Device 2: NVIDIA GeForce GTX 1060 with Max-Q Design (NVIDIA Corporation) OpenCL 3.0 CUDA (Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_d3d10_sharing cl_khr_d3d10_sharing cl_nv_d3d11_sharing cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_win32 cl_khr_external_memory_win32)
+2023-10-03 10:49:32-0400: Loaded tuning parameters from: D:\Projects\JavaScript\Baduk Live Analysis\katago/KataGoData/opencltuning/tune11_gpuNVIDIAGeForceGTX1060withMaxQDesign_x29_y29_c384_mv14.txt
+2023-10-03 10:49:33-0400: OpenCL backend thread 0: Model version 14
+2023-10-03 10:49:33-0400: OpenCL backend thread 0: Model name: kata1-b18c384nbt-s6582191360-d3422816034
+2023-10-03 10:49:34-0400: OpenCL backend thread 0: FP16Storage true FP16Compute false FP16TensorCores false FP16TensorCoresFor1x1 false
+2023-10-03 10:49:34-0400: Loaded config ./katago/analysis.cfg
+2023-10-03 10:49:34-0400: Loaded model ./katago/default_model.bin.gz
+2023-10-03 10:49:34-0400: Analyzing up to 2 positions at a time in parallel
+2023-10-03 10:49:34-0400: Started, ready to begin handling requests
