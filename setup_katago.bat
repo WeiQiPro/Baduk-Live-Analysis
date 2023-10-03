@@ -8,4 +8,4 @@ echo.
 echo.
 echo 100
 echo 5
-) | katago\katago.exe genconfig -model katago\default_model.bin.gz -output default_config.cfg
+) | katago\katago.exe genconfig -model katago\default_model.bin.gz -output katago\default_config.cfg
