@@ -1,0 +1,81 @@
+2025-07-07 22:44:46-0400: Running with following config:
+allowResignation = true
+lagBuffer = 1.0
+logAllGTPCommunication = true
+logDir = gtp_logs
+logSearchInfo = true
+logToStderr = false
+maxPlayouts = 500
+maxTime = 10.0
+maxVisits = 500
+nnCacheSizePowerOfTwo = 20
+nnMaxBatchSize = 6
+nnRandomize = false
+numAnalysisThreads = 6
+numSearchThreads = 2
+resignConsecTurns = 3
+resignThreshold = -0.90
+rules = chinese
+
+2025-07-07 22:44:46-0400: Analysis Engine starting...
+2025-07-07 22:44:46-0400: KataGo v1.13.0
+2025-07-07 22:44:47-0400: nnRandSeed0 = 11961950152308015486
+2025-07-07 22:44:47-0400: After dedups: nnModelFile0 = ./server/katago/weights.bin.gz useFP16 auto useNHWC auto
+2025-07-07 22:44:47-0400: Initializing neural net buffer to be size 29 * 29 allowing smaller boards
+2025-07-07 22:44:49-0400: Found OpenCL Platform 0: Intel(R) OpenCL Graphics (Intel(R) Corporation) (OpenCL 3.0 )
+2025-07-07 22:44:49-0400: Found 1 device(s) on platform 0 with type CPU or GPU or Accelerator
+2025-07-07 22:44:49-0400: Found OpenCL Device 0: Intel(R) Arc(TM) A770 Graphics (Intel(R) Corporation) (score 6000300)
+2025-07-07 22:44:49-0400: Creating context for OpenCL Platform: Intel(R) OpenCL Graphics (Intel(R) Corporation) (OpenCL 3.0 )
+2025-07-07 22:44:49-0400: Using OpenCL Device 0: Intel(R) Arc(TM) A770 Graphics (Intel(R) Corporation) OpenCL 3.0 NEO  (Extensions: cl_khr_byte_addressable_store cl_khr_device_uuid cl_khr_fp16 cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_icd cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_intel_command_queue_families cl_intel_subgroups cl_intel_required_subgroup_size cl_intel_subgroups_short cl_khr_spir cl_intel_accelerator cl_intel_driver_diagnostics cl_khr_priority_hints cl_khr_throttle_hints cl_khr_create_command_queue cl_intel_subgroups_char cl_intel_subgroups_long cl_khr_il_program cl_intel_mem_force_host_memory cl_khr_subgroup_extended_types cl_khr_subgroup_non_uniform_vote cl_khr_subgroup_ballot cl_khr_subgroup_non_uniform_arithmetic cl_khr_subgroup_shuffle cl_khr_subgroup_shuffle_relative cl_khr_subgroup_clustered_reduce cl_intel_device_attribute_query cl_khr_expect_assume cl_khr_extended_bit_ops cl_khr_suggested_local_work_size cl_intel_split_work_group_barrier cl_intel_spirv_media_block_io cl_intel_spirv_subgroups cl_khr_spirv_linkonce_odr cl_khr_spirv_no_integer_wrap_decoration cl_intel_unified_shared_memory cl_khr_mipmap_image cl_khr_mipmap_image_writes cl_ext_float_atomics cl_khr_external_memory cl_intel_planar_yuv cl_intel_packed_yuv cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_image2d_from_buffer cl_khr_depth_images cl_khr_3d_image_writes cl_intel_media_block_io cl_intel_bfloat16_conversions cl_intel_create_buffer_with_properties cl_intel_subgroup_local_block_io cl_intel_subgroup_matrix_multiply_accumulate cl_intel_subgroup_split_matrix_multiply_accumulate cl_khr_integer_dot_product cl_khr_gl_sharing cl_khr_gl_depth_images cl_khr_gl_event cl_khr_gl_msaa_sharing cl_intel_dx9_media_sharing cl_khr_dx9_media_sharing cl_khr_d3d10_sharing cl_khr_d3d11_sharing cl_intel_d3d11_nv12_media_sharing cl_intel_sharing_format_query cl_khr_pci_bus_info cl_intel_simultaneous_sharing )
+2025-07-07 22:44:49-0400: Loaded tuning parameters from: A:\Baduk-Live-Analysis\server\katago/KataGoData/opencltuning/tune11_gpuIntelRArcTMA770Graphics_x29_y29_c384_mv14.txt
+2025-07-07 22:44:49-0400: OpenCL backend thread 0: Model version 14
+2025-07-07 22:44:49-0400: OpenCL backend thread 0: Model name: kata1-b18c384nbt-s6582191360-d3422816034
+2025-07-07 22:44:50-0400: OpenCL backend thread 0: FP16Storage true FP16Compute true FP16TensorCores false FP16TensorCoresFor1x1 false
+2025-07-07 22:44:50-0400: Note: nnMaxBatchSize * number of GPUs (6) is smaller than numSearchThreads * numAnalysisThreads (12)
+2025-07-07 22:44:50-0400: The number of simultaneous threads that might query the GPU could be larger than the batch size that the GPU will handle at once.
+2025-07-07 22:44:50-0400: It may improve performance to increase nnMaxBatchSize, unless you are constrained on GPU memory.
+2025-07-07 22:44:50-0400: --------------
+2025-07-07 22:44:50-0400: WARNING: Config had unused keys! You may have a typo, an option you specified is being unused from ./server/katago/default.cfg
+2025-07-07 22:44:50-0400: WARNING: Unused key 'allowResignation' in ./server/katago/default.cfg
+2025-07-07 22:44:50-0400: WARNING: Unused key 'logAllGTPCommunication' in ./server/katago/default.cfg
+2025-07-07 22:44:50-0400: WARNING: Unused key 'resignConsecTurns' in ./server/katago/default.cfg
+2025-07-07 22:44:50-0400: WARNING: Unused key 'resignThreshold' in ./server/katago/default.cfg
+2025-07-07 22:44:50-0400: WARNING: Unused key 'rules' in ./server/katago/default.cfg
+2025-07-07 22:44:50-0400: --------------
+2025-07-07 22:44:50-0400: Loaded config ./server/katago/default.cfg
+2025-07-07 22:44:50-0400: Loaded model ./server/katago/weights.bin.gz
+2025-07-07 22:44:50-0400: Analyzing up to 6 positions at a time in parallel
+2025-07-07 22:44:50-0400: Started, ready to begin handling requests
+2025-07-07 22:44:50-0400: MoveNum: 0 HASH: CDCBC1F514D7E680FACD226074256633
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . . . . . .
+17 . . . . . . . . . . . . . . . . . . .
+16 . . . . . . . . . . . . . . . . . . .
+15 . . . . . . . . . . . . . . . . . . .
+14 . . . . . . . . . . . . . . . . . . .
+13 . . . . . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . . . . . . . . . . . . . . . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreAREAtaxNONEsui0whbNfpok1komi6.5
+Root visits: 1
+New playouts: 1
+NN rows: 1
+NN batches: 1
+NN avg batch size: 1
+PV: 
+Tree:
+: T  13.19c W  13.01c S   0.18c ( +0.5 L  +0.7) N       1  --  
+---Black(^)---
+

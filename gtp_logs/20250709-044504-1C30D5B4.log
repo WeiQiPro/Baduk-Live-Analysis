@@ -1,0 +1,925 @@
+2025-07-09 04:45:04-0400: Running with following config:
+allowResignation = true
+lagBuffer = 1.0
+logAllGTPCommunication = true
+logDir = gtp_logs
+logSearchInfo = true
+logToStderr = false
+maxPlayouts = 500
+maxTime = 10.0
+maxVisits = 500
+nnCacheSizePowerOfTwo = 20
+nnMaxBatchSize = 6
+nnRandomize = false
+numAnalysisThreads = 6
+numSearchThreads = 2
+reportAnalysisWinratesAs = BLACK
+resignConsecTurns = 3
+resignThreshold = -0.90
+rules = chinese
+
+2025-07-09 04:45:04-0400: Analysis Engine starting...
+2025-07-09 04:45:04-0400: KataGo v1.13.0
+2025-07-09 04:45:05-0400: nnRandSeed0 = 7716957510580651756
+2025-07-09 04:45:05-0400: After dedups: nnModelFile0 = ./server/katago/weights.bin.gz useFP16 auto useNHWC auto
+2025-07-09 04:45:05-0400: Initializing neural net buffer to be size 29 * 29 allowing smaller boards
+2025-07-09 04:45:06-0400: Found OpenCL Platform 0: Intel(R) OpenCL Graphics (Intel(R) Corporation) (OpenCL 3.0 )
+2025-07-09 04:45:06-0400: Found 1 device(s) on platform 0 with type CPU or GPU or Accelerator
+2025-07-09 04:45:06-0400: Found OpenCL Device 0: Intel(R) Arc(TM) A770 Graphics (Intel(R) Corporation) (score 6000300)
+2025-07-09 04:45:06-0400: Creating context for OpenCL Platform: Intel(R) OpenCL Graphics (Intel(R) Corporation) (OpenCL 3.0 )
+2025-07-09 04:45:06-0400: Using OpenCL Device 0: Intel(R) Arc(TM) A770 Graphics (Intel(R) Corporation) OpenCL 3.0 NEO  (Extensions: cl_khr_byte_addressable_store cl_khr_device_uuid cl_khr_fp16 cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_icd cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_intel_command_queue_families cl_intel_subgroups cl_intel_required_subgroup_size cl_intel_subgroups_short cl_khr_spir cl_intel_accelerator cl_intel_driver_diagnostics cl_khr_priority_hints cl_khr_throttle_hints cl_khr_create_command_queue cl_intel_subgroups_char cl_intel_subgroups_long cl_khr_il_program cl_intel_mem_force_host_memory cl_khr_subgroup_extended_types cl_khr_subgroup_non_uniform_vote cl_khr_subgroup_ballot cl_khr_subgroup_non_uniform_arithmetic cl_khr_subgroup_shuffle cl_khr_subgroup_shuffle_relative cl_khr_subgroup_clustered_reduce cl_intel_device_attribute_query cl_khr_expect_assume cl_khr_extended_bit_ops cl_khr_suggested_local_work_size cl_intel_split_work_group_barrier cl_intel_spirv_media_block_io cl_intel_spirv_subgroups cl_khr_spirv_linkonce_odr cl_khr_spirv_no_integer_wrap_decoration cl_intel_unified_shared_memory cl_khr_mipmap_image cl_khr_mipmap_image_writes cl_ext_float_atomics cl_khr_external_memory cl_intel_planar_yuv cl_intel_packed_yuv cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_image2d_from_buffer cl_khr_depth_images cl_khr_3d_image_writes cl_intel_media_block_io cl_intel_bfloat16_conversions cl_intel_create_buffer_with_properties cl_intel_subgroup_local_block_io cl_intel_subgroup_matrix_multiply_accumulate cl_intel_subgroup_split_matrix_multiply_accumulate cl_khr_integer_dot_product cl_khr_gl_sharing cl_khr_gl_depth_images cl_khr_gl_event cl_khr_gl_msaa_sharing cl_intel_dx9_media_sharing cl_khr_dx9_media_sharing cl_khr_d3d10_sharing cl_khr_d3d11_sharing cl_intel_d3d11_nv12_media_sharing cl_intel_sharing_format_query cl_khr_pci_bus_info cl_intel_simultaneous_sharing )
+2025-07-09 04:45:06-0400: Loaded tuning parameters from: A:\Baduk-Live-Analysis\server\katago/KataGoData/opencltuning/tune11_gpuIntelRArcTMA770Graphics_x29_y29_c384_mv14.txt
+2025-07-09 04:45:06-0400: OpenCL backend thread 0: Model version 14
+2025-07-09 04:45:06-0400: OpenCL backend thread 0: Model name: kata1-b18c384nbt-s6582191360-d3422816034
+2025-07-09 04:45:07-0400: OpenCL backend thread 0: FP16Storage true FP16Compute true FP16TensorCores false FP16TensorCoresFor1x1 false
+2025-07-09 04:45:07-0400: Note: nnMaxBatchSize * number of GPUs (6) is smaller than numSearchThreads * numAnalysisThreads (12)
+2025-07-09 04:45:07-0400: The number of simultaneous threads that might query the GPU could be larger than the batch size that the GPU will handle at once.
+2025-07-09 04:45:07-0400: It may improve performance to increase nnMaxBatchSize, unless you are constrained on GPU memory.
+2025-07-09 04:45:07-0400: --------------
+2025-07-09 04:45:07-0400: WARNING: Config had unused keys! You may have a typo, an option you specified is being unused from ./server/katago/default.cfg
+2025-07-09 04:45:07-0400: WARNING: Unused key 'allowResignation' in ./server/katago/default.cfg
+2025-07-09 04:45:07-0400: WARNING: Unused key 'logAllGTPCommunication' in ./server/katago/default.cfg
+2025-07-09 04:45:07-0400: WARNING: Unused key 'resignConsecTurns' in ./server/katago/default.cfg
+2025-07-09 04:45:07-0400: WARNING: Unused key 'resignThreshold' in ./server/katago/default.cfg
+2025-07-09 04:45:07-0400: WARNING: Unused key 'rules' in ./server/katago/default.cfg
+2025-07-09 04:45:07-0400: --------------
+2025-07-09 04:45:07-0400: Loaded config ./server/katago/default.cfg
+2025-07-09 04:45:07-0400: Loaded model ./server/katago/weights.bin.gz
+2025-07-09 04:45:07-0400: Analyzing up to 6 positions at a time in parallel
+2025-07-09 04:45:07-0400: Started, ready to begin handling requests
+2025-07-09 04:45:07-0400: MoveNum: 0 HASH: CDCBC1F514D7E680FACD226074256633
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . . . . . .
+17 . . . . . . . . . . . . . . . . . . .
+16 . . . . . . . . . . . . . . . . . . .
+15 . . . . . . . . . . . . . . . . . . .
+14 . . . . . . . . . . . . . . . . . . .
+13 . . . . . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . . . . . . . . . . . . . . . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreAREAtaxNONEsui0whbNfpok1komi6.5
+Root visits: 1
+New playouts: 1
+NN rows: 1
+NN batches: 1
+NN avg batch size: 1
+PV: 
+Tree:
+: T  13.19c W  13.01c S   0.18c ( +0.5 L  +0.7) N       1  --  
+---Black(^)---
+
+2025-07-09 04:45:10-0400: MoveNum: 5 HASH: 1349EB00E36A31344ED3112F34288AC2
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . . . . . .
+17 . . . X1. . . . . . . . . . . . . . .
+16 . . . . . . . . . . . . . . . . X . .
+15 . . . X3. . . . . . . . . . . . . . .
+14 . . . . . . . . . . . . . . . . . . .
+13 . . . . . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O2. . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 11
+NN batches: 11
+NN avg batch size: 1
+PV: P17 Q14 L16 C3
+Tree:
+: T  -5.34c W  -5.13c S   0.08c ( -0.5 L  -0.4) N      10  --  P17 Q14 L16 C3
+---White(v)---
+P17 : T  -5.84c W  -5.54c S   0.11c ( -0.5 L  -0.4) LCB    8.70c P 60.15% WF  20.6 PSV      21 N       7  --  P17 Q14 L16 C3
+D14 : T  -0.75c W  -1.08c S   0.33c ( -0.3 L  -0.3) LCB  349.25c P 14.73% WF   2.9 PSV       2 N       1  --  D14
+P16 : T  -1.44c W  -1.44c S  -0.00c ( -0.6 L  -0.6) LCB  348.56c P  5.72% WF   3.1 PSV       1 N       1  --  P16
+
+2025-07-09 04:45:12-0400: MoveNum: 6 HASH: 5BC8BE6E725D918930D6FF038EAE6F25
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . . . . . .
+17 . . . X . . . . . . . . . . . . . . .
+16 . . . . . . . . . . . . . . . . X . .
+15 . . . X2. . . . . . . . . . . . . . .
+14 . . . O3. . . . . . . . . . . . . . .
+13 . . . . . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O1. . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 20
+NN batches: 20
+NN avg batch size: 1
+PV: C14 C13 D13 E14
+Tree:
+: T  -4.34c W  -4.25c S  -0.20c ( -0.4 L  -0.3) N      10  --  C14 C13 D13 E14
+---Black(^)---
+C14 : T  -4.14c W  -4.22c S  -0.12c ( -0.3 L  -0.2) LCB  -47.64c P 37.30% WF  10.0 PSV      11 N       4  --  C14 C13 D13 E14
+C15 : T  -4.99c W  -4.79c S  -0.28c ( -0.5 L  -0.3) LCB  -47.87c P 46.71% WF  11.2 PSV      11 N       4  --  C15 P17 Q14 L16
+E14 : T  -5.77c W  -5.46c S  -0.31c ( -0.5 L  -0.3) LCB -355.77c P  5.76% WF   2.8 PSV       1 N       1  --  E14
+
+2025-07-09 04:45:32-0400: MoveNum: 7 HASH: 3EEE5861940E45D83FA4938864F0DD3E
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . . . . . .
+17 . . . X . . . . . . . . . . . . . . .
+16 . . . . . . . . . . . . . . . . X . .
+15 . . . X1. . . . . . . . . . . . . . .
+14 . . . O2X3. . . . . . . . . . . . . .
+13 . . . . . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 30
+NN batches: 30
+NN avg batch size: 1
+PV: C15 E15 C16 D13 D16 E16 C17 C14
+Tree:
+: T  -2.95c W  -3.35c S   0.07c ( -0.3 L  -0.3) N      10  --  C15 E15 C16 D13 D16 E16 C17
+---White(v)---
+C15 : T  -3.27c W  -3.74c S   0.04c ( -0.3 L  -0.3) LCB    7.83c P 88.25% WF  18.9 PSV      19 N       8  --  C15 E15 C16 D13 D16 E16 C17 C14
+Q16 : T   2.86c W   2.31c S   0.55c ( +0.2 L  +0.1) LCB  352.86c P  6.80% WF   2.3 PSV       0 N       1  --  Q16
+
+2025-07-09 04:45:34-0400: MoveNum: 8 HASH: EF8769A91E22200955FF1CB5125AC822
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . . . . . .
+17 . . . X . . . . . . . . . . . . . . .
+16 . . . . . . . . . . . . . . . . X . .
+15 . . O3X . . . . . . . . . . . . . . .
+14 . . . O1X2. . . . . . . . . . . . . .
+13 . . . . . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 33
+NN batches: 33
+NN avg batch size: 1
+PV: E15 C16 D13 D16 E16 C17 C14 E17
+Tree:
+: T  -2.75c W  -3.42c S  -0.00c ( -0.3 L  -0.3) N      10  --  E15 C16 D13 D16 E16 C17 C14
+---Black(^)---
+E15 : T  -2.61c W  -3.37c S   0.01c ( -0.2 L  -0.3) LCB  -11.89c P 91.42% WF  21.0 PSV      21 N       9  --  E15 C16 D13 D16 E16 C17 C14 E17
+
+2025-07-09 04:45:46-0400: MoveNum: 9 HASH: C934236F6245D37B8F0A4C5D43FBD08F
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . . . . . .
+17 . . . X . . . . . . . . . . . . . . .
+16 . . . . . . . . . . . . . . . . X . .
+15 . . O2X X3. . . . . . . . . . . . . .
+14 . . . O X1. . . . . . . . . . . . . .
+13 . . . . . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 37
+NN batches: 37
+NN avg batch size: 1
+PV: C16 D13 D16 E16 C17 C14
+Tree:
+: T  -2.54c W  -2.83c S   0.14c ( -0.2 L  -0.3) N      10  --  C16 D13 D16 E16 C17 C14
+---White(v)---
+C16 : T  -2.92c W  -3.33c S   0.14c ( -0.2 L  -0.3) LCB   16.63c P 64.03% WF  14.0 PSV      14 N       6  --  C16 D13 D16 E16 C17 C14
+C17 : T  -3.30c W  -3.36c S   0.06c ( -0.3 L  -0.5) LCB  346.70c P 11.49% WF   2.5 PSV       2 N       1  --  C17
+P17 : T   1.47c W   1.10c S   0.38c ( -0.0 L  -0.1) LCB  351.47c P 13.24% WF   2.2 PSV       1 N       1  --  P17
+P16 : T   0.72c W   0.39c S   0.33c ( -0.0 L  -0.3) LCB  350.72c P  6.50% WF   2.3 PSV       1 N       1  --  P16
+
+2025-07-09 04:45:48-0400: MoveNum: 10 HASH: 5E0D95A8DF8887B1D085C6EDE001A487
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . . . . . .
+17 . . . X . . . . . . . . . . . . . . .
+16 . . O3. . . . . . . . . . . . . X . .
+15 . . O1X X2. . . . . . . . . . . . . .
+14 . . . O X . . . . . . . . . . . . . .
+13 . . . . . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 40
+NN batches: 40
+NN avg batch size: 1
+PV: D13 D16 E16 C17 C14 E17 F17
+Tree:
+: T  -4.78c W  -3.82c S  -0.09c ( -0.3 L  -0.3) N      10  --  D13 D16 E16 C17 C14 E17 F17
+---Black(^)---
+D13 : T  -4.94c W  -3.87c S  -0.09c ( -0.3 L  -0.3) LCB  -14.74c P 96.44% WF  20.1 PSV      20 N       9  --  D13 D16 E16 C17 C14 E17 F17
+
+2025-07-09 04:45:58-0400: MoveNum: 11 HASH: ACE3E544BBD580664358F87F59A76CAA
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . . . . . .
+17 . . . X . . . . . . . . . . . . . . .
+16 . . O2. . . . . . . . . . . . . X . .
+15 . . O X X1. . . . . . . . . . . . . .
+14 . . . O X . . . . . . . . . . . . . .
+13 . . . X3. . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 42
+NN batches: 42
+NN avg batch size: 1
+PV: D16 E16 C17 C14 E17 F17 D18
+Tree:
+: T  -4.74c W  -3.86c S  -0.24c ( -0.3 L  -0.3) N      10  --  D16 E16 C17 C14 E17 F17 D18
+---White(v)---
+D16 : T  -4.98c W  -3.99c S  -0.27c ( -0.3 L  -0.3) LCB    4.84c P 94.62% WF  20.0 PSV      20 N       9  --  D16 E16 C17 C14 E17 F17 D18
+
+2025-07-09 04:45:59-0400: MoveNum: 12 HASH: 10D94E8F6E624EDBFC25A5794BCF1353
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . . . . . .
+17 . . . X . . . . . . . . . . . . . . .
+16 . . O1O3. . . . . . . . . . . . X . .
+15 . . O X X . . . . . . . . . . . . . .
+14 . . . O X . . . . . . . . . . . . . .
+13 . . . X2. . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 44
+NN batches: 44
+NN avg batch size: 1
+PV: E16 C17 C14 E17 F17 D18 R3
+Tree:
+: T  -4.55c W  -3.94c S  -0.16c ( -0.3 L  -0.3) N      10  --  E16 C17 C14 E17 F17 D18 R3
+---Black(^)---
+E16 : T  -4.82c W  -4.15c S  -0.17c ( -0.3 L  -0.3) LCB  -14.64c P 99.35% WF  20.2 PSV      20 N       9  --  E16 C17 C14 E17 F17 D18 R3
+
+2025-07-09 04:46:00-0400: MoveNum: 13 HASH: 549C19845E7365B65998FEE915E532CE
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . . . . . .
+17 . . . X . . . . . . . . . . . . . . .
+16 . . O O2X3. . . . . . . . . . . X . .
+15 . . O X X . . . . . . . . . . . . . .
+14 . . . O X . . . . . . . . . . . . . .
+13 . . . X1. . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 46
+NN batches: 46
+NN avg batch size: 1
+PV: C17 C14 E17 F17 D18 R3
+Tree:
+: T  -6.39c W  -4.97c S  -0.11c ( -0.4 L  -0.4) N      10  --  C17 C14 E17 F17 D18 R3
+---White(v)---
+C17 : T  -6.41c W  -4.83c S  -0.11c ( -0.4 L  -0.4) LCB    4.02c P 99.19% WF  19.9 PSV      20 N       9  --  C17 C14 E17 F17 D18 R3
+
+2025-07-09 04:46:01-0400: MoveNum: 14 HASH: 9B7D9BD61C215CD8FFBDDEC79936F12E
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . . . . . .
+17 . . O3X . . . . . . . . . . . . . . .
+16 . . O O1X2. . . . . . . . . . . X . .
+15 . . O X X . . . . . . . . . . . . . .
+14 . . . O X . . . . . . . . . . . . . .
+13 . . . X . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 48
+NN batches: 48
+NN avg batch size: 1
+PV: C14 E17 F17 D18 R3
+Tree:
+: T  -7.74c W  -5.80c S  -0.23c ( -0.4 L  -0.4) N      10  --  C14 E17 F17 D18 R3
+---Black(^)---
+C14 : T  -5.81c W  -4.18c S  -0.11c ( -0.3 L  -0.3) LCB  -26.72c P 54.74% WF  13.2 PSV      13 N       6  --  C14 E17 F17 D18 R3
+E18 : T -13.68c W -10.34c S  -0.53c ( -0.7 L  -0.6) LCB  -89.52c P 41.58% WF   6.1 PSV       5 N       3  --  E18 D18 C14
+
+2025-07-09 04:46:02-0400: MoveNum: 15 HASH: F2E2C8F2C6D4705D981A8898E3C68469
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . X3. . . . . . . . . . . . . .
+17 . . O2X . . . . . . . . . . . . . . .
+16 . . O O X1. . . . . . . . . . . X . .
+15 . . O X X . . . . . . . . . . . . . .
+14 . . . O X . . . . . . . . . . . . . .
+13 . . . X . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 55
+NN batches: 55
+NN avg batch size: 1
+PV: D18 C14 E17 F17 P17 Q14
+Tree:
+: T  -8.02c W  -7.38c S  -0.34c ( -0.5 L  -0.5) N      10  --  D18 C14 E17 F17 P17 Q14
+---White(v)---
+D18 : T -10.29c W  -9.60c S  -0.52c ( -0.7 L  -0.6) LCB    4.91c P 65.46% WF  14.8 PSV      15 N       7  --  D18 C14 E17 F17 P17 Q14
+C14 : T  -1.75c W  -1.00c S   0.16c ( -0.0 L  -0.2) LCB  147.26c P 33.28% WF   4.4 PSV       3 N       2  --  C14 C18
+
+2025-07-09 04:46:03-0400: MoveNum: 16 HASH: 85BEBF1487E129C35B8946FC114445F6
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . X2. . . . . . . . . . . . . .
+17 . . O1X . . . . . . . . . . . . . . .
+16 . . O O X . . . . . . . . . . . X . .
+15 . . O X X . . . . . . . . . . . . . .
+14 . . O3O X . . . . . . . . . . . . . .
+13 . . . X . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 64
+NN batches: 64
+NN avg batch size: 1
+PV: C18 C13 D12 C12 M17 D11 M15
+Tree:
+: T  -1.72c W  -2.04c S  -0.23c ( -0.1 L  -0.2) N      10  --  C18 C13 D12 C12 M17 D11 M15
+---Black(^)---
+C18 : T  -0.78c W  -1.28c S  -0.19c ( -0.1 L  -0.1) LCB  -12.39c P 69.90% WF  17.6 PSV      18 N       8  --  C18 C13 D12 C12 M17 D11 M15
+M17 : T -12.96c W -12.00c S  -0.96c ( -0.8 L  -0.6) LCB -362.96c P  7.60% WF   2.0 PSV       0 N       1  --  M17
+
+2025-07-09 04:46:04-0400: MoveNum: 17 HASH: F36335D5D41CB6526D199B62424BAF78
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . X3. X1. . . . . . . . . . . . . .
+17 . . O X . . . . . . . . . . . . . . .
+16 . . O O X . . . . . . . . . . . X . .
+15 . . O X X . . . . . . . . . . . . . .
+14 . . O2O X . . . . . . . . . . . . . .
+13 . . . X . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 67
+NN batches: 67
+NN avg batch size: 1
+PV: C13 D12 C12 M17 D11 M15
+Tree:
+: T   0.31c W  -0.22c S   0.15c ( -0.0 L  -0.1) N      10  --  C13 D12 C12 M17 D11 M15
+---White(v)---
+C13 : T  -0.15c W  -0.97c S   0.11c ( -0.1 L  -0.1) LCB   19.80c P 72.51% WF  13.3 PSV      13 N       6  --  C13 D12 C12 M17 D11 M15
+F17 : T  -2.65c W  -2.26c S  -0.07c ( -0.2 L  -0.2) LCB  147.34c P 14.62% WF   4.3 PSV       3 N       2  --  F17 E17
+B12 : T  12.09c W  10.97c S   1.12c ( +1.0 L  +0.4) LCB  362.09c P  8.88% WF   2.2 PSV       0 N       1  --  B12
+
+2025-07-09 04:46:06-0400: MoveNum: 16 HASH: 85BEBF1487E129C35B8946FC114445F6
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . X2. . . . . . . . . . . . . .
+17 . . O1X . . . . . . . . . . . . . . .
+16 . . O O X . . . . . . . . . . . X . .
+15 . . O X X . . . . . . . . . . . . . .
+14 . . O3O X . . . . . . . . . . . . . .
+13 . . . X . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 68
+NN batches: 68
+NN avg batch size: 1
+PV: C18 C13 D12 C12 M17 D11 M15
+Tree:
+: T  -2.73c W  -3.01c S  -0.29c ( -0.2 L  -0.2) N      10  --  C18 C13 D12 C12 M17 D11 M15
+---Black(^)---
+C18 : T  -0.63c W  -1.24c S  -0.18c ( -0.1 L  -0.1) LCB  -15.52c P 69.90% WF  15.6 PSV      16 N       7  --  C18 C13 D12 C12 M17 D11 M15
+M17 : T -12.96c W -12.00c S  -0.96c ( -0.8 L  -0.6) LCB -362.96c P  7.60% WF   2.0 PSV       0 N       1  --  M17
+O17 : T -12.71c W -11.86c S  -0.84c ( -0.7 L  -0.5) LCB -362.71c P  6.00% WF   2.1 PSV       0 N       1  --  O17
+
+2025-07-09 04:46:07-0400: MoveNum: 15 HASH: F2E2C8F2C6D4705D981A8898E3C68469
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . X3. . . . . . . . . . . . . .
+17 . . O2X . . . . . . . . . . . . . . .
+16 . . O O X1. . . . . . . . . . . X . .
+15 . . O X X . . . . . . . . . . . . . .
+14 . . . O X . . . . . . . . . . . . . .
+13 . . . X . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 68
+NN batches: 68
+NN avg batch size: 1
+PV: D18 C14 E17 F17 P17 Q14
+Tree:
+: T  -8.02c W  -7.38c S  -0.34c ( -0.5 L  -0.5) N      10  --  D18 C14 E17 F17 P17 Q14
+---White(v)---
+D18 : T -10.29c W  -9.60c S  -0.52c ( -0.7 L  -0.6) LCB    4.91c P 65.46% WF  14.8 PSV      15 N       7  --  D18 C14 E17 F17 P17 Q14
+C14 : T  -1.75c W  -1.00c S   0.16c ( -0.0 L  -0.2) LCB  147.26c P 33.28% WF   4.4 PSV       3 N       2  --  C14 C18
+
+2025-07-09 04:46:11-0400: MoveNum: 16 HASH: D9F44CD7ED6479965FCBA4A4FEE0229B
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . O3X2. . . . . . . . . . . . . .
+17 . . O1X . . . . . . . . . . . . . . .
+16 . . O O X . . . . . . . . . . . X . .
+15 . . O X X . . . . . . . . . . . . . .
+14 . . . O X . . . . . . . . . . . . . .
+13 . . . X . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 72
+NN batches: 72
+NN avg batch size: 1
+PV: C14 E17 F17 P17 C6
+Tree:
+: T -10.05c W  -9.43c S  -0.14c ( -0.7 L  -0.5) N      10  --  C14 E17 F17 P17 C6
+---Black(^)---
+C14 : T -10.18c W  -9.70c S  -0.11c ( -0.7 L  -0.5) LCB  -30.54c P 63.99% WF  12.2 PSV      16 N       6  --  C14 E17 F17 P17 C6
+E17 : T  -9.70c W  -8.72c S  -0.15c ( -0.7 L  -0.5) LCB  -83.95c P 35.09% WF   7.0 PSV       7 N       3  --  E17 C14 N17
+
+2025-07-09 04:46:13-0400: MoveNum: 17 HASH: D59AF58F768C95540AA3F705EEA81DA6
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . O2X1. . . . . . . . . . . . . .
+17 . . O X X3. . . . . . . . . . . . . .
+16 . . O O X . . . . . . . . . . . X . .
+15 . . O X X . . . . . . . . . . . . . .
+14 . . . O X . . . . . . . . . . . . . .
+13 . . . X . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 80
+NN batches: 80
+NN avg batch size: 1
+PV: C14 O17 E13 D12
+Tree:
+: T  -7.09c W  -7.07c S   0.04c ( -0.6 L  -0.5) N      10  --  C14 O17 E13 D12
+---White(v)---
+C14 : T  -7.33c W  -7.62c S   0.02c ( -0.6 L  -0.5) LCB    8.17c P 79.09% WF  16.1 PSV      16 N       7  --  C14 O17 E13 D12
+Q16 : T  -4.53c W  -3.48c S   0.28c ( -0.3 L  -0.4) LCB  144.72c P 13.62% WF   4.3 PSV       2 N       2  --  Q16 Q17
+
+2025-07-09 04:46:15-0400: MoveNum: 18 HASH: A2C6826937B9CCCAC93039611C2ADC39
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . O1X . . . . . . . . . . . . . .
+17 . . O X X2. . . . . . . . . . . . . .
+16 . . O O X . . . . . . . . . . . X . .
+15 . . O X X . . . . . . . . . . . . . .
+14 . . O3O X . . . . . . . . . . . . . .
+13 . . . X . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 84
+NN batches: 84
+NN avg batch size: 1
+PV: O17 E13 D12 F13
+Tree:
+: T  -5.32c W  -6.57c S  -0.26c ( -0.5 L  -0.4) N      10  --  O17 E13 D12 F13
+---Black(^)---
+O17 : T   0.73c W  -2.86c S   0.06c ( -0.2 L  -0.2) LCB  -43.30c P 28.68% WF   9.4 PSV       9 N       4  --  O17 E13 D12 F13
+N17 : T  -8.29c W  -8.05c S  -0.41c ( -0.6 L  -0.5) LCB  -82.33c P 30.41% WF   6.7 PSV       4 N       3  --  N17 E13 D12
+C13 : T -14.90c W -14.09c S  -0.81c ( -1.0 L  -0.7) LCB -364.90c P 16.02% WF   2.2 PSV       1 N       1  --  C13
+M17 : T -12.75c W -11.95c S  -0.80c ( -1.0 L  -0.6) LCB -362.75c P  9.70% WF   2.1 PSV       1 N       1  --  M17
+
+2025-07-09 04:46:17-0400: MoveNum: 19 HASH: C2CA14186ED9086866147466436748B8
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . O X . . . . . . . . . . . . . .
+17 . . O X X1. . . . . . . . . . . . . .
+16 . . O O X . . . . . . . . . . . X . .
+15 . . O X X . . . . . . . . . . . . . .
+14 . . O2O X . . . . . . . . . . . . . .
+13 . . X3X . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 94
+NN batches: 94
+NN avg batch size: 1
+PV: P17 M16 M18
+Tree:
+: T -10.89c W -10.67c S  -0.02c ( -0.7 L  -0.6) N      10  --  P17 M16 M18
+---White(v)---
+P17 : T -13.16c W -12.53c S  -0.05c ( -0.8 L  -0.6) LCB   29.96c P 38.59% WF   9.1 PSV       9 N       4  --  P17 M16 M18
+P16 : T  -8.21c W  -8.36c S   0.05c ( -0.7 L  -0.6) LCB   65.95c P 30.08% WF   7.0 PSV       4 N       3  --  P16 N17 R17
+Q16 : T  -8.82c W  -8.91c S   0.10c ( -0.6 L  -0.5) LCB  140.73c P 20.66% WF   4.7 PSV       3 N       2  --  Q16 R17
+
+2025-07-09 04:46:25-0400: MoveNum: 20 HASH: CBDEAB89A522B2BA1DE234CDB2422286
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . O X . . . . . . . . . . . . . .
+17 . . O X X . . . . . . . . . . . . . .
+16 . . O O X . . . . . . . . . O3. X . .
+15 . . O X X . . . . . . . . . . . . . .
+14 . . O1O X . . . . . . . . . . . . . .
+13 . . X2X . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 102
+NN batches: 102
+NN avg batch size: 1
+PV: N17 R17 N15 O17 N18
+Tree:
+: T  -9.49c W  -9.42c S  -0.11c ( -0.7 L  -0.6) N      10  --  N17 R17 N15 O17 N18
+---Black(^)---
+N17 : T  -7.71c W  -7.65c S   0.05c ( -0.5 L  -0.5) LCB  -27.31c P 48.05% WF  13.5 PSV      13 N       6  --  N17 R17 N15 O17 N18
+M17 : T -12.08c W -12.30c S  -0.31c ( -0.9 L  -0.7) LCB -161.66c P 23.18% WF   4.6 PSV       4 N       2  --  M17 R17
+B13 : T -15.66c W -15.18c S  -0.48c ( -1.1 L  -0.5) LCB -365.66c P  9.82% WF   1.9 PSV       1 N       1  --  B13
+
+2025-07-09 04:46:32-0400: MoveNum: 9 HASH: C934236F6245D37B8F0A4C5D43FBD08F
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . . . . . .
+17 . . . X . . . . . . . . . . . . . . .
+16 . . . . . . . . . . . . . . . . X . .
+15 . . O2X X3. . . . . . . . . . . . . .
+14 . . . O X1. . . . . . . . . . . . . .
+13 . . . . . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 103
+NN batches: 103
+NN avg batch size: 1
+PV: C16 D13 D16 E16 C17 C14
+Tree:
+: T  -2.66c W  -2.92c S   0.16c ( -0.2 L  -0.3) N      10  --  C16 D13 D16 E16 C17 C14
+---White(v)---
+C16 : T  -2.92c W  -3.33c S   0.14c ( -0.2 L  -0.3) LCB   16.63c P 64.03% WF  14.0 PSV      14 N       6  --  C16 D13 D16 E16 C17 C14
+P17 : T   0.45c W   0.32c S   0.45c ( +0.1 L  -0.0) LCB  149.43c P 13.24% WF   4.4 PSV       2 N       2  --  P17 D13
+C17 : T  -3.30c W  -3.36c S   0.06c ( -0.3 L  -0.5) LCB  346.70c P 11.49% WF   2.5 PSV       2 N       1  --  C17
+
+2025-07-09 04:46:36-0400: MoveNum: 10 HASH: 5E0D95A8DF8887B1D085C6EDE001A487
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . . . . . .
+17 . . . X . . . . . . . . . . . . . . .
+16 . . O3. . . . . . . . . . . . . X . .
+15 . . O1X X2. . . . . . . . . . . . . .
+14 . . . O X . . . . . . . . . . . . . .
+13 . . . . . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 103
+NN batches: 103
+NN avg batch size: 1
+PV: D13 D16 E16 C17 C14 E17 F17
+Tree:
+: T  -4.78c W  -3.82c S  -0.09c ( -0.3 L  -0.3) N      10  --  D13 D16 E16 C17 C14 E17 F17
+---Black(^)---
+D13 : T  -4.94c W  -3.87c S  -0.09c ( -0.3 L  -0.3) LCB  -14.74c P 96.44% WF  20.1 PSV      20 N       9  --  D13 D16 E16 C17 C14 E17 F17
+
+2025-07-09 04:46:38-0400: MoveNum: 11 HASH: ACE3E544BBD580664358F87F59A76CAA
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . . . . . .
+17 . . . X . . . . . . . . . . . . . . .
+16 . . O2. . . . . . . . . . . . . X . .
+15 . . O X X1. . . . . . . . . . . . . .
+14 . . . O X . . . . . . . . . . . . . .
+13 . . . X3. . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 103
+NN batches: 103
+NN avg batch size: 1
+PV: D16 E16 C17 C14 E17 F17 D18
+Tree:
+: T  -4.74c W  -3.86c S  -0.24c ( -0.3 L  -0.3) N      10  --  D16 E16 C17 C14 E17 F17 D18
+---White(v)---
+D16 : T  -4.98c W  -3.99c S  -0.27c ( -0.3 L  -0.3) LCB    4.84c P 94.62% WF  20.0 PSV      20 N       9  --  D16 E16 C17 C14 E17 F17 D18
+
+2025-07-09 04:48:56-0400: MoveNum: 12 HASH: 10D94E8F6E624EDBFC25A5794BCF1353
+   A B C D E F G H J K L M N O P Q R S T
+19 . . . . . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . . . . . .
+17 . . . X . . . . . . . . . . . . . . .
+16 . . O1O3. . . . . . . . . . . . X . .
+15 . . O X X . . . . . . . . . . . . . .
+14 . . . O X . . . . . . . . . . . . . .
+13 . . . X2. . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . . . . . .
+ 9 . . . . . . . . . . . . . . . . . . .
+ 8 . . . . . . . . . . . . . . . . . . .
+ 7 . . . . . . . . . . . . . . . . . . .
+ 6 . . . . . . . . . . . . . . . . . . .
+ 5 . . . . . . . . . . . . . . . . . . .
+ 4 . . . O . . . . . . . . . . . O . . .
+ 3 . . . . . . . . . . . . . . . . . . .
+ 2 . . . . . . . . . . . . . . . . . . .
+ 1 . . . . . . . . . . . . . . . . . . .
+
+koSIMPLEscoreTERRITORYtaxSEKIsui0komi6.5
+Root visits: 10
+New playouts: 10
+NN rows: 103
+NN batches: 103
+NN avg batch size: 1
+PV: E16 C17 C14 E17 F17 D18 R3
+Tree:
+: T  -4.55c W  -3.94c S  -0.16c ( -0.3 L  -0.3) N      10  --  E16 C17 C14 E17 F17 D18 R3
+---Black(^)---
+E16 : T  -4.82c W  -4.15c S  -0.17c ( -0.3 L  -0.3) LCB  -14.64c P 99.35% WF  20.2 PSV      20 N       9  --  E16 C17 C14 E17 F17 D18 R3
+
